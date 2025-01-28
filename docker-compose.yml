@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build: .
+    container_name: jupyter_notebooks
+    volumes:
+      - ./notebooks:/home/jovyan/notebooks
+      - ./.env:/home/jovyan/.env
+    ports:
+      - "8888:8888"
