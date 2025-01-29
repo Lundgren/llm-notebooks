@@ -2,7 +2,7 @@ FROM jupyter/base-notebook:latest
 
 USER root
 
-RUN pip install --no-cache-dir openai litellm
+RUN pip install --no-cache-dir pandas openai litellm python-dotenv
 
 # Create a directory for the notebooks
 RUN mkdir -p /home/jovyan/notebooks
